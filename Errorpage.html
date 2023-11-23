@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+    background-color: #001222;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+h3 {
+    color: red;
+    font-size: 1.4rem;
+}
+.container {
+    text-align: center;
+    background-color: #001f3f;
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(8px);
+}
+
+.important-text {
+    color: gold;
+}
+
+.nav-link {
+    color: gold;
+    text-decoration: none;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: gold;
+    color: darkblue;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 3px;
+}
+.cta-button:hover {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 3px;
+     box-shadow: 0 0 4px 4px lime;
+}
+legend {
+    color:red;
+    border-radius: 5px;
+}
+fieldset {
+    border: none;
+    border-right-color: lime;
+    border-left-color: lime;
+    border-top-color: red;
+    border-bottom-color: red;
+    border-radius: 5px;
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Error - Page Not Found</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <fieldset>
+        <legend>--------------------------------------ERROR-------------------------------------------------</legend>
+    <div class="container">
+        <h1 class="important-text">404 Error - Page Not Found</h1>
+        <p class="important-text">We're sorry, but the page you're looking for could not be found.</p>
+        <h3>Please login|signup or</h3>
+        <button class="cta-button" onclick="goBack()" onclick="header('VETI-ICT DEPARTMENT.html')" onclick="alert('your are going back to the previous window')" onclick="alert('login or signup first!')">Go Back</button>
+    </div>
+</fieldset>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    <script>
+function goBack() {
+    window.history.back();
+}
+</script>
+</body>
+</html>

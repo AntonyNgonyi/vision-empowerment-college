@@ -1,0 +1,71 @@
+
+<style>
+    /* Existing styles remain unchanged */
+
+    nav {
+        background-color: #333;
+        color: #ffffff;
+        text-align: center;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav a {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 10px;
+        margin: 0 10px;
+    }
+
+    /* Media query for smaller screens */
+    @media only screen and (max-width: 600px) {
+        nav {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 5px 0;
+            display: block;
+        }
+
+        #menu-icon {
+            display: block;
+            cursor: pointer;
+        }
+
+        #menu-icon:hover {
+            color: #005ce6;
+        }
+    }
+
+    #menu-icon {
+        display: none;
+    }
+</style>
+
+<script>
+    function toggleMenu() {
+        var nav = document.getElementById("nav");
+        nav.classList.toggle("responsive");
+    }
+</script>
+<body>
+
+    <header>
+        <img src="your-logo.png" alt="ICT Department Logo" width="80">
+    </header>
+
+    <nav id="nav">
+        <a href="#">Home</a>
+        <a href="#" onclick="toggleCourses()">Courses</a>
+        <a href="tel:o113384323">Contact</a>
+        <a href="mailto:veti@ac.ke">Email</a>
+        <span id="menu-icon" onclick="toggleMenu()">☰</span>
+    </nav>
+
+    <!-- Remaining content sections -->
+
+    <!-- Add the JavaScript function at the end of the body -->
+</body>

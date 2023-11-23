@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT Department</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #005ce6;
+            color: #ffffff;
+            padding: 10px;
+            text-align: left;
+            border-radius: 2px;
+        }
+
+        header img {
+            width: 40px;
+            height: 40px;
+            margin-top: 5px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+
+        nav {
+            background-color: #0052cc;
+            color: #001f4d;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+        }
+               background-color: #333;
+        color: #ffffff;
+        text-align: center;
+        padding: 10px;
+    }
+
+    nav a {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 10px;
+        margin: 0 10px;
+    }
+
+    /* Media query for smaller screens */
+    @media only screen and (max-width: 600px) {
+        nav {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 5px 0;
+            display: block;
+        }
+    }
+     nav a {
+            margin: 5px 0;
+            display: block;
+        }
+
+        #menu-icon {
+            display: block;
+            cursor: pointer;
+        }
+
+        #menu-icon:hover {
+            color: #005ce6;
+        }
+    }
+
+    #menu-icon {
+        display: none;
+    }
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #0052cc;
+            color: #001f4d;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 12px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="/storage/emulated/0/Download/images (1).jpeg" alt="ICT Department Logo" width="100">
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#" onclick="toggleCourses()">Courses</a>
+        <a href="#" onclick="togglecontact()">Contact</a>
+        <a href="mailto:info@vetiac.ke">Email</a>
+         <span id="menu-icon" onclick="toggleMenu()">☰</span>
+    </nav>
+
+    <section id="courses-section" style="display: none;">
+        <h2>Courses Offered</h2>
+        <ul>
+            <li>Graphics Design</li>
+            <li>Web Development</li>
+            <li>Diploma in Iinformation TechnologyT</li>
+            <li>Programming</li>
+            <li>Certificate in Information Technology</li>
+            <li>Computer packages</li>
+        </ul>
+    </section>
+    <section id="contact-section" style="display:none;">
+        <h2>contact-section</h2>
+        <ol type="1">
+            <li "tel:0113384323">0113384323</tel:0113384323>
+            <li "mailto:info@veti.ac.ke">Mail us</li>
+
+        </ul>
+        <section>
+            <!-- Your main content goes here -->
+        </section>
+
+        <footer>
+            &copy; 2023 VETI-ICT Department
+        </footer>
+
+        <script>
+            function toggleCourses() {
+                var coursesSection = document.getElementById("courses-section");
+                coursesSection.style.display = (coursesSection.style.display === 'none') ? 'inline-block': 'none';
+            }
+        </script>
+        <script>
+            function togglecontact() {
+                var contactsection = document.getElementById("contact-section");
+                contactsection.style.display = (contactsection.style.display === 'none') ? 'inline-block': 'none';
+            }
+        </script>
+        <script>
+    function toggleMenu() {
+        var nav = document.getElementById("nav");
+        nav.classList.toggle("responsive");
+    }
+</script>
+
+    </body>
+</html>
