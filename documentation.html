@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICT Department Vision Empowerment Training Institute</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #007BFF; /* Blue background */
+      color: #FFFFFF; /* White text */
+    }
+
+    .container {
+      background-color: rgba(0, 0, 128, 0.3); /* Faded navy background for the entire content */
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    .card-container {
+      background-color: rgba(0, 0, 128, 0.3); /* Faded navy background for cards */
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    h1, h2 {
+      color: #FF0000; /* Red heading color */
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 20px; /* Additional space between cards */
+    }
+
+    p {
+      text-align: left;
+    }
+
+    button {
+      background-color: #007BFF; /* Blue button color */
+      color: #FFFFFF; /* White text */
+      padding: 15px 30px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #008000; /* Green on hover */
+    }
+
+    button:active {
+      animation: rotateButton 1s infinite; /* Continuous rotation on click */
+    }
+
+    @keyframes rotateButton {
+      to {
+        transform: rotate(360deg); /* Rotate continuously */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Introduction Container -->
+  <div class="container">
+    <h1>Project Documentation: VETI ICT Department Website</h1>
+
+    <p><strong>Project Officer:</strong> Isaac Mutuku</p>
+    <p><strong>Project Developer/Designer:</strong> Antony Maingi</p>
+      <p><strong>Time:</strong> <span id="currentDateTime"></span></p>
+    <p><strong>Date:12/01/2023</strong> <span id="currentDate"></span><script>function getCurrentDate() {
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  const formatter = new Intl.DateTimeFormat('en-US', options);
+  return formatter.format(new Date());
+}</script></p>
+  </div>
+
+  <!-- Analysis Card -->
+  <div class="card-container">
+    <h2>Analysis</h2>
+    <p>Explore various analysis techniques for developing a responsive web. Include:</p>
+    <ul>
+      <li>Requirement analysis</li>
+      <li>Competitor analysis</li>
+      <li>User analysis</li>
+    </ul>
+    <!-- Add more content as needed -->
+  </div>
+
+  <!-- Design Card -->
+  <div class="card-container">
+    <h2>Design</h2>
+    <p>Utilized Photoshop (Ps) and Corel Draw for project layout design.</p>
+    <!-- Add more content as needed -->
+  </div>
+
+  <!-- Coding Card -->
+  <div class="card-container">
+    <h2>Coding</h2>
+    <p>Implemented coding using Visual Studio Code (VS Code). VS Code supports various languages and offers real-time collaboration.</p>
+    <!-- Add more content as needed -->
+  </div>
+
+  <!-- System Test Card -->
+  <div class="card-container">
+    <h2>System Test</h2>
+    <p>Conducted comprehensive system tests, ensuring functionality and responsiveness. Hosted on GitHub Pages for wider accessibility.</p>
+    <!-- Add more content as needed -->
+  </div>
+
+  <!-- Installation and Conversion Card -->
+  <div class="card-container">
+    <h2>Installation and Conversion</h2>
+    <p>Deployed project online using GitHub. GitHub Pages enables global accessibility.</p>
+    <!-- Add more content as needed -->
+  </div>
+
+  <!-- Operation and Maintenance Card -->
+  <div class="card-container">
+    <h2>Operation and Maintenance</h2>
+    <p>For school websites, ensure regular updates, backup procedures, and security measures. Website management involves content updates, server maintenance, and user support.</p>
+    <!-- Add more content as needed -->
+  </div>
+
+  <!-- About Project Card -->
+  <div class="card-container">
+    <h2>About Project</h2>
+    <p>Developed by Antony Maingi for dedication to VETI ICT Department under Mr. Isaac Mutuku, Lecturer at Vision Empowerment Training Institute.</p>
+    <p>Contact: <a href="tel:0113384323">0113384323</a></p>
+    <!-- Add more content as needed -->
+  </div>
+
+  <!-- JavaScript for getting the current date and time -->
+  <script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+  <script>
+    // Function to format date and time in EAT (Nairobi, Kenya)
+    function getEATDateTime() {
+      const options = { timeZone: 'Africa/Nairobi', timeZoneName: 'short', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+      const formatter = new Intl.DateTimeFormat('en-US', options);
+      return formatter.formatToParts(new Date()).map(part => part.value).join('');
+    }
+
+    // Update the content with the current date and time
+    document.getElementById('currentDateTime').textContent = getEATDateTime();
+
+    
+    // Function to download the content as PDF
+    function downloadPDF() {
+      var content = document.querySelectorAll('.container, .card-container');
+      var element = document.createElement('div');
+      content.forEach(item => {
+        element.appendChild(item.cloneNode(true));
+      });
+      html2pdf(element, {
+        margin: 10,
+        filename: 'VETI_ICT_Documentation.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      });
+      
+      // Display alert message for troubleshooting
+      alert("If the PDF download doesn't work as intended, consider using Ctrl+P (Print) to save the document.");
+    }
+  </script>
+    <script>
+    // Function to format date and time in EAT (Nairobi, Kenya)
+    function getCurrentDate() {
+      const options = { timeZone: 'Africa/Nairobi', timeZoneName: 'short' };
+      const formatter = new Intl.DateTimeFormat('en-US', options);
+      return formatter.format(new Date());
+    }
+
+    // Update the content with the current date and time
+    document.getElementById('currentDateTime').textContent = getEATDateTime();
+    </script>
+
+  <!-- Download Button -->
+  <button onclick="downloadPDF()">Download as PDF</button>
+
+</body>
+</html>
